@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Verificação de Idade</title>
+</head>
+<style>
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.logo, .nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  list-style: none;
+  margin-right: 20px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+</style>
+<body>
+  <nav class="navbar">
+    <div class="logo">Logo</div>
+    <ul class="nav-links">
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+      <li><a href="#">Link 3</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+  
+
+  <script>
+    function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('show');
+}
+
+  </script>
+</body>
+</html>
